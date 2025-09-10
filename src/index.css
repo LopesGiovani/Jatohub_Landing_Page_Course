@@ -1,0 +1,269 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Jatohub Design System - Ultra Moderno com Tecnologia de Ponta */
+
+@layer base {
+  :root {
+    --background: 222 84% 4%;
+    --foreground: 0 0% 98%;
+
+    --card: 222 84% 6%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 222 84% 6%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 122 100% 50%;
+    --primary-foreground: 222 84% 4%;
+
+    --secondary: 222 20% 12%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 222 20% 15%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent: 122 100% 50%;
+    --accent-foreground: 222 84% 4%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 222 20% 20%;
+    --input: 222 20% 15%;
+    --ring: 122 100% 50%;
+
+    /* Gradientes Ultra Modernos */
+    --gradient-hero: linear-gradient(135deg, hsl(222, 84%, 4%) 0%, hsl(222, 50%, 8%) 25%, hsl(122, 100%, 5%) 50%, hsl(222, 84%, 4%) 100%);
+    --gradient-card: linear-gradient(145deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+    --gradient-accent: linear-gradient(90deg, hsl(122, 100%, 50%) 0%, hsl(122, 80%, 60%) 50%, hsl(122, 100%, 40%) 100%);
+    --gradient-mesh: radial-gradient(circle at 25% 25%, hsl(122, 100%, 50%, 0.1) 0%, transparent 50%), 
+                     radial-gradient(circle at 75% 75%, hsl(122, 80%, 60%, 0.1) 0%, transparent 50%),
+                     radial-gradient(circle at 50% 50%, hsl(122, 60%, 70%, 0.05) 0%, transparent 50%);
+    
+    /* Efeitos Glassmorphism e Sombras Avançadas */
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --shadow-neon: 0 0 30px hsl(122, 100%, 50%, 0.4), 0 0 60px hsl(122, 100%, 50%, 0.2);
+    --shadow-card: 0 25px 50px -12px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.1);
+    --shadow-button: 0 10px 25px hsl(122, 100%, 50%, 0.3), 0 0 0 1px hsl(122, 100%, 50%, 0.2);
+    --shadow-floating: 0 32px 64px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.1);
+    
+    /* Animações Ultra Fluidas */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --transition-elastic: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    --radius: 1rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  /* Dark mode é o padrão, mas mantemos light para compatibilidade */
+  .light {
+    --background: 0 0% 100%;
+    --foreground: 222 84% 4%;
+    --card: 0 0% 98%;
+    --card-foreground: 222 84% 4%;
+    --primary: 122 100% 40%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 222 84% 4%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+    --accent: 122 100% 40%;
+    --accent-foreground: 0 0% 98%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 122 100% 40%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-image: var(--gradient-mesh);
+    background-attachment: fixed;
+  }
+
+  /* Tipografia Ultra Moderna */
+  .text-gradient {
+    background: var(--gradient-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background-size: 200% auto;
+    animation: shimmer 3s ease-in-out infinite;
+  }
+
+  .glow-text {
+    text-shadow: 0 0 20px hsl(var(--primary) / 0.8), 0 0 40px hsl(var(--primary) / 0.4);
+  }
+
+  /* Efeitos Glassmorphism Ultra Modernos */
+  .glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid var(--glass-border);
+  }
+
+  .glass-intense {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(30px) saturate(200%);
+    -webkit-backdrop-filter: blur(30px) saturate(200%);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .neon-border {
+    border: 1px solid hsl(var(--primary));
+    box-shadow: var(--shadow-neon);
+  }
+
+  .card-modern {
+    background: var(--gradient-card);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: var(--shadow-card);
+  }
+
+  .floating-card {
+    background: var(--gradient-card);
+    backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: var(--shadow-floating);
+  }
+
+  /* Animações Ultra Avançadas */
+  @keyframes shimmer {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  @keyframes pulse-neon {
+    0%, 100% { 
+      text-shadow: 0 0 10px hsl(var(--primary) / 0.8), 0 0 20px hsl(var(--primary) / 0.6);
+      filter: blur(0px);
+    }
+    50% { 
+      text-shadow: 0 0 30px hsl(var(--primary) / 1), 0 0 60px hsl(var(--primary) / 0.8);
+      filter: blur(0.5px);
+    }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    25% { transform: translateY(-5px) rotate(0.5deg); }
+    50% { transform: translateY(-10px) rotate(0deg); }
+    75% { transform: translateY(-5px) rotate(-0.5deg); }
+  }
+
+  @keyframes glow-pulse {
+    0%, 100% { filter: drop-shadow(0 0 10px hsl(var(--primary) / 0.5)); }
+    50% { filter: drop-shadow(0 0 30px hsl(var(--primary) / 0.8)) drop-shadow(0 0 50px hsl(var(--primary) / 0.4)); }
+  }
+
+  @keyframes scale-breath {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+  }
+
+  @keyframes rotate-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  .animate-pulse-neon {
+    animation: pulse-neon 2s infinite;
+  }
+
+  .animate-float {
+    animation: float 4s ease-in-out infinite;
+  }
+
+  .animate-glow-pulse {
+    animation: glow-pulse 3s ease-in-out infinite;
+  }
+
+  .animate-scale-breath {
+    animation: scale-breath 4s ease-in-out infinite;
+  }
+
+  .animate-rotate-slow {
+    animation: rotate-slow 20s linear infinite;
+  }
+
+  /* Hover Effects Ultra Modernos */
+  .hover-lift {
+    transition: var(--transition-smooth);
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: var(--shadow-floating);
+  }
+
+  .hover-glow {
+    transition: var(--transition-smooth);
+  }
+
+  .hover-glow:hover {
+    text-shadow: 0 0 20px hsl(var(--primary) / 0.8), 0 0 40px hsl(var(--primary) / 0.4);
+  }
+
+  .hover-glass {
+    transition: var(--transition-smooth);
+  }
+
+  .hover-glass:hover {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(30px);
+    border-color: rgba(255, 255, 255, 0.4);
+  }
+
+  /* Micro-interações */
+  .micro-bounce {
+    transition: var(--transition-bounce);
+  }
+
+  .micro-bounce:active {
+    transform: scale(0.95);
+  }
+
+  .ripple-effect {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .ripple-effect::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+  }
+
+  .ripple-effect:active::before {
+    width: 300px;
+    height: 300px;
+  }
+}
