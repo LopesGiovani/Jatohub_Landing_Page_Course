@@ -67,7 +67,12 @@ const Hero = () => {
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16 animate-fade-in-up" style={{
         animationDelay: '1s'
       }}>
-          <Button variant="hero" size="lg" className="text-sm sm:text-base lg:text-lg px-3 sm:px-6 lg:px-8 py-4 sm:py-4 h-auto ripple-effect hover-lift micro-bounce w-full sm:w-auto whitespace-normal leading-tight text-center">
+          <Button 
+            variant="hero" 
+            size="lg" 
+            className="text-sm sm:text-base lg:text-lg px-3 sm:px-6 lg:px-8 py-4 sm:py-4 h-auto ripple-effect hover-lift micro-bounce w-full sm:w-auto whitespace-normal leading-tight text-center"
+            onClick={() => window.open('https://pay.hub.la/EYvGkhvrNHjdVjbwDq9t', '_blank')}
+          >
             Quero criar minha empresa de IA agora mesmo
             <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
           </Button>

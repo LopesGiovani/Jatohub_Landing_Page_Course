@@ -73,7 +73,12 @@ const Pricing = () => {
                   <p className="text-muted-foreground">pagamento único</p>
                 </div>
 
-                <Button variant="hero" size="lg" className="w-full text-lg py-8 h-auto whitespace-normal leading-tight mb-6">
+                <Button 
+                  variant="hero" 
+                  size="lg" 
+                  className="w-full text-lg py-8 h-auto whitespace-normal leading-tight mb-6"
+                  onClick={() => window.open('https://pay.hub.la/EYvGkhvrNHjdVjbwDq9t', '_blank')}
+                >
                   Quero criar minha empresa de IA em 30 dias
                   <ArrowRight className="w-5 h-5 ml-2 flex-shrink-0" />
                 </Button>

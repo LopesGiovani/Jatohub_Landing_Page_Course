@@ -53,7 +53,12 @@ const FinalCTA = () => {
               </p>
             </div>
 
-            <Button variant="hero" size="lg" className="text-xl px-12 py-6 h-auto w-full md:w-auto">
+            <Button 
+              variant="hero" 
+              size="lg" 
+              className="text-xl px-12 py-6 h-auto w-full md:w-auto"
+              onClick={() => window.open('https://pay.hub.la/EYvGkhvrNHjdVjbwDq9t', '_blank')}
+            >
               Quero criar minha empresa de IA em 30 dias (por apenas R$79,90)
               <ArrowRight className="w-6 h-6 ml-3" />
             </Button>

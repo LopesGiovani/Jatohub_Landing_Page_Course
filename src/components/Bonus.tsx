@@ -88,7 +88,12 @@ const Bonus = () => {
               Mas hoje você leva tudo isso de <strong>graça</strong> junto com o curso
             </p>
             
-            <Button variant="hero" size="lg" className="w-full">
+            <Button 
+              variant="hero" 
+              size="lg" 
+              className="w-full"
+              onClick={() => window.open('https://pay.hub.la/EYvGkhvrNHjdVjbwDq9t', '_blank')}
+            >
               Quero todos os bônus agora
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>

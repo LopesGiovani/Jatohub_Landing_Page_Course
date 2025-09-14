@@ -31,7 +31,11 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="flex items-center gap-4">
-            <Button variant="cta" className="hidden sm:flex ripple-effect hover-lift animate-pulse-neon">
+            <Button 
+              variant="cta" 
+              className="hidden sm:flex ripple-effect hover-lift animate-pulse-neon"
+              onClick={() => window.open('https://pay.hub.la/EYvGkhvrNHjdVjbwDq9t', '_blank')}
+            >
               Acessar Curso
             </Button>
             
